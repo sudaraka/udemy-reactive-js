@@ -1,0 +1,42 @@
+{
+  "name": "udemy-reactive-js",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Practice code for Udemy course - Reactive JS: Are you ready for the next big paradigm shift?",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -fr dist/",
+    "build": "webpack",
+    "pretest": "eslint src/",
+    "server:api": "nodemon dist/server.js",
+    "server:web": "live-server --no-browser --port=5000 dist/www/",
+    "test": "exit 0;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudaraka/udemy-reactive-js.git"
+  },
+  "author": "Sudaraka Wijesinghe <sudaraka@sudaraka.org> (https://sudaraka.org/)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/sudaraka/udemy-reactive-js/issues"
+  },
+  "homepage": "https://github.com/sudaraka/udemy-reactive-js#readme",
+  "devDependencies": {
+    "@sudaraka/eslint-config-default": "^0.6.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-2": "^6.13.0",
+    "colour": "^0.7.1",
+    "eslint": "^3.2.2",
+    "html-webpack-plugin": "^2.22.0",
+    "jquery": "^3.1.0",
+    "live-server": "^1.0.0",
+    "lodash": "^4.14.1",
+    "moment": "^2.14.1",
+    "nodemon": "^1.10.0",
+    "rxjs": "^5.0.0-beta.10",
+    "webpack": "^1.13.1",
+    "webpack-merge": "^0.14.1"
+  }
+}
