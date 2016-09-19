@@ -41,10 +41,16 @@ const
     let
       index = 0
 
-    setInterval(() => {
-      index += 1
-      observer.next(index)
-    }, time)
+    const
+      interval = setInterval(() => {
+        index += 1
+
+        console.log('Generating', index)
+
+        observer.next(index)
+      }, time)
+
+    return () => clearInterval(interval)
   }),
 
   createSubscriber = tag => ({
@@ -53,6 +59,31 @@ const
     'complete': () => console.log(`${tag}.complete`)
   }),
 
-  everySecond = createInterval$(1000)
+  take$ = (sourceObservable$, amount) => new Rx.Observable(observer => {
+    let
+      count = 0
 
-everySecond.subscribe(createSubscriber('one'))
+    const
+      innerSubscription = sourceObservable$.subscribe(
+        item => {
+          observer.next(item)
+          count += 1
+
+          if(count >= amount) {
+            observer.complete()
+          }
+        },
+        observer.error,
+        observer.complete
+      )
+
+    return () => innerSubscription.unsubscribe()
+  }),
+
+  everySecond = createInterval$(1000),
+  firstFiveSeconds = take$(everySecond, 5),
+  subscription = firstFiveSeconds.subscribe(createSubscriber('one'))
+
+// setTimeout(() => {
+//   subscription.unsubscribe()
+// }, 3500)
