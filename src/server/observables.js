@@ -1,5 +1,7 @@
 import Rx from 'rxjs/Rx'
 
+import { createSubscriber } from '../utils'
+
 /* -- Part 1 --
 const
   simple$ = new Rx.Observable(observer => {
@@ -51,12 +53,6 @@ const
       }, time)
 
     return () => clearInterval(interval)
-  }),
-
-  createSubscriber = tag => ({
-    'next': item => console.log(`${tag}.next: ${item}`),
-    'error': err => console.log(`${tag}.err: ${err.stack || err}`),
-    'complete': () => console.log(`${tag}.complete`)
   }),
 
   take$ = (sourceObservable$, amount) => new Rx.Observable(observer => {

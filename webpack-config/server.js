@@ -6,7 +6,8 @@ export default {
 
   'entry': {
     'server.js': './cli.js',
-    'observables.js': './observables.js'
+    'observables.js': './observables.js',
+    'builtin.js': './builtin.js'
   },
 
   'node': { '__dirname': false }
