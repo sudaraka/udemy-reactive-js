@@ -7,6 +7,7 @@
   "scripts": {
     "clean": "rm -fr dist/",
     "build": "webpack",
+    "nodemon": "nodemon --watch dist/",
     "pretest": "eslint src/",
     "server:api": "nodemon dist/server.js",
     "server:web": "live-server --no-browser --port=5000 dist/www/",
