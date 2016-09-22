@@ -8,6 +8,7 @@ export default {
     'server.js': './cli.js',
     'observables.js': './observables.js',
     'from.js': './from.js',
+    'subjects.js': './subjects.js',
     'builtin.js': './builtin.js'
   },
 
