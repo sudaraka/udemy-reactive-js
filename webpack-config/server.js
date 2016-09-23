@@ -9,6 +9,7 @@ export default {
     'observables.js': './observables.js',
     'from.js': './from.js',
     'subjects.js': './subjects.js',
+    'hot_cold.js': './hot_cold.js',
     'builtin.js': './builtin.js'
   },
 
