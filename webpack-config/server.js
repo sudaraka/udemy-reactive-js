@@ -13,6 +13,7 @@ export default {
     'operators_1.js': './operators_1.js',
     'operators_2.js': './operators_2.js',
     'operators_3.js': './operators_3.js',
+    'operators_4.js': './operators_4.js',
     'builtin.js': './builtin.js'
   },
 
