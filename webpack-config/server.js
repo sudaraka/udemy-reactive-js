@@ -11,6 +11,7 @@ export default {
     'subjects.js': './subjects.js',
     'hot_cold.js': './hot_cold.js',
     'operators_1.js': './operators_1.js',
+    'operators_2.js': './operators_2.js',
     'builtin.js': './builtin.js'
   },
 
