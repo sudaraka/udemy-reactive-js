@@ -14,6 +14,7 @@ export default {
     'operators_2.js': './operators_2.js',
     'operators_3.js': './operators_3.js',
     'operators_4.js': './operators_4.js',
+    'operators_5.js': './operators_5.js',
     'builtin.js': './builtin.js'
   },
 
